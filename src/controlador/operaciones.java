@@ -36,7 +36,14 @@ class operaciones {
                 //Devuelve el fichero seleccionado
                 File imagenSeleccionada=selector.getSelectedFile();
                 //Asignamos a la variable bmp la imagen leida
+                String extension = imagenSeleccionada.getName().split("\\.", 2)[1];
                 bmp = ImageIO.read(imagenSeleccionada);
+                if(extension.equals("png")){//para haceptar imagenes PNG
+                    BufferedImage newBufferedImage = new BufferedImage(bmp.getWidth(),
+                    bmp.getHeight(), BufferedImage.TYPE_INT_RGB);
+                    newBufferedImage.createGraphics().drawImage(bmp, 0, 0, Color.WHITE, null);
+                    bmp=newBufferedImage;
+                }
             } catch (IOException e) {
                 
             }
