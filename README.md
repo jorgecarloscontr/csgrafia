@@ -1,4 +1,4 @@
-# csgrafia -Criptografia y esteganografia para el ocultamiento de informacion
+# csgrafia -Criptografia y esteganografia
 
 En la parte de criptografia se utilizo la encriptacion por RSA.
 El cual es de tipo asimétrica, ya que se caracteriza por utilizar claves distintas para el cifrado y descifrado de la información. 
